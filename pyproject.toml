@@ -1,10 +1,10 @@
 [build-system]
-build-backend = "setuptools.build_meta"
-requires = ["setuptools>=42"]
+build-backend = "hatchling.build"
+requires = ["hatchling", "hatch-vcs"]
 
 [project]
 name = "lembas-planingfsi"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Lembas plugin for planingfsi hydrodynamic simulations"
 license = {text = "MIT"}
 requires-python = ">=3.11"
@@ -13,8 +13,17 @@ dependencies = [
   "planingfsi",
 ]
 
+[project.optional-dependencies]
+dev = ["pytest"]
+
 [project.entry-points."lembas.plugins"]
 planingfsi = "lembas_planingfsi:Plugin"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/lembas_planingfsi/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lembas_planingfsi"]

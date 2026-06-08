@@ -1,6 +1,5 @@
 [project]
 name = "lembas-planingfsi"
-version = "0.1.0"
 type = "plugin"
 description = "Lembas plugin for planingfsi hydrodynamic simulations"
 channels = ["conda-forge"]
@@ -12,6 +11,7 @@ planingfsi = "*"
 
 [dev-dependencies]
 pytest = "*"
+rattler-build = "*"
 
 [plugin]
 entry-point = "lembas_planingfsi:Plugin"
@@ -20,3 +20,4 @@ handlers = ["PlaningPlateCase"]
 
 [tasks]
 test = "pytest tests/ -v"
+build = "rattler-build build --recipe conda.recipe/ --output-dir dist/"
