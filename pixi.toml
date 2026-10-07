@@ -4,8 +4,8 @@ planingfsi = "*"
 python = ">=3.11"
 
 [environments]
-build = {features = ["build"], solve-group = "default"}
-default = {features = ["dev"], solve-group = "default"}
+build = { features = ["build"], solve-group = "default" }
+default = { features = ["dev"], solve-group = "default" }
 
 [feature.build.dependencies]
 anaconda-client = "*"
@@ -24,7 +24,7 @@ pytest = "*"
 ruff = "*"
 
 [pypi-dependencies]
-lembas-planingfsi = {path = ".", editable = true}
+lembas-planingfsi = { path = ".", editable = true }
 
 [tasks]
 pre-commit-install = "pre-commit install"
