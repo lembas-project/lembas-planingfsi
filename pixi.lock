@@ -1534,8 +1534,8 @@ packages:
   timestamp: 1781065281440
 - pypi: .
   name: lembas-planingfsi
-  version: 0.1.1.dev7+gc0ab5a9fc
-  sha256: 0b3815f4e28bcb1698a1a8ac0421a8c6be8fa9e9772eac0dba652b2228fdac5e
+  version: 0.1.1.dev4+g8f086abe3.d20261007
+  sha256: be1d68091048bc5fdb3481a0f5c6b8753c1dedf8be588b7c3508e5f7b8974299
   requires_dist:
   - pytest ; extra == 'dev'
   requires_python: '>=3.11'
