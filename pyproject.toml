@@ -7,7 +7,7 @@ dependencies = [
 ]
 description = "Lembas plugin for planingfsi hydrodynamic simulations"
 dynamic = ["version"]
-license = {text = "MIT"}
+license = { text = "MIT" }
 name = "lembas-planingfsi"
 requires-python = ">=3.11"
 
